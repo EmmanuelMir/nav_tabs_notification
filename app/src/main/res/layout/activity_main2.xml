@@ -35,25 +35,26 @@
             <android.support.design.widget.TabLayout
                 android:id="@+id/tabs"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:tabMode="scrollable">
 
                 <android.support.design.widget.TabItem
                     android:id="@+id/tabItem"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tab_text_1" />
+                    android:text="NOVOS CLIENTES" />
 
                 <android.support.design.widget.TabItem
                     android:id="@+id/tabItem2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tab_text_2" />
+                    android:text="TENTANDO CONTATO" />
 
                 <android.support.design.widget.TabItem
                     android:id="@+id/tabItem3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tab_text_3" />
+                    android:text="COMPRADORES" />
 
             </android.support.design.widget.TabLayout>
 
