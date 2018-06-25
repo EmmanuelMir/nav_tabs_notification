@@ -1,5 +1,8 @@
 package com.emmanuelmir.custom_notification;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.constraint.Placeholder;
 import android.support.design.widget.NavigationView;
@@ -7,6 +10,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -24,6 +28,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
+    private PopUpNotification mNotificationPopUp;
     /**
      * The {@link ViewPager} that will host the section contents.
      */
@@ -55,6 +60,8 @@ public class MainActivity extends AppCompatActivity
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
+
+        mNotificationPopUp = new PopUpNotification();
 
     }
 
@@ -166,4 +173,10 @@ public class MainActivity extends AppCompatActivity
             return 3;
         }
     }
+
+    public void onClickNotificationCreator(View view){
+        mNotificationPopUp.customNotification(view);
+    }
+
+
 }
